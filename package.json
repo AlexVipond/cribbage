@@ -1,0 +1,46 @@
+{
+  "name": "@alexvipond/cribbage-points",
+  "version": "0.0.1",
+  "description": "Functions for automatically calculating the total points of a cribbage hand",
+  "main": "./lib/index.umd.js",
+  "module": "./lib/index.es.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.es.js",
+      "require": "./lib/index.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:lib": "vite build --config vite.lib.config.ts && tsc",
+    "test:only": "run() { uvu -r ts-node/register tests/$2 $1.test.ts$; }; run",
+    "test": "npm run test:only ."
+  },
+  "devDependencies": {
+    "@fontsource/inconsolata": "^4.3.0",
+    "@fontsource/inter": "^4.3.0",
+    "@netlify/functions": "^0.7.2",
+    "@tailwindcss/forms": "^0.3.2",
+    "@types/node": "^15.3.1",
+    "@vitejs/plugin-vue": "^1.2.2",
+    "autoprefixer": "^10.2.5",
+    "node-fetch": "^2.6.1",
+    "postcss": "^8.2.13",
+    "tailwindcss": "^2.1.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4",
+    "uvu": "^0.5.1",
+    "vite": "^2.2.3"
+  },
+  "dependencies": {
+    "@baleada/logic": "^0.19.9",
+    "@baleada/vue-composition": "^0.10.0",
+    "@baleada/vue-simple-icons": "^0.1.0",
+    "@headlessui/vue": "^1.2.0",
+    "@heroicons/vue": "^1.0.1",
+    "nanoid": "^3.1.23",
+    "vue": "^3.0.11"
+  }
+}
